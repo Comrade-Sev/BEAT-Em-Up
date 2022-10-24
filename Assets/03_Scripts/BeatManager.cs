@@ -23,7 +23,7 @@ namespace Game
             _originalColor = rend.material.color;
         }
 
-        void OnCollisionEnter(Collision collision)
+        void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
             if (_timer > 0.8 * beat || _timer < 0.1f)
