@@ -48,7 +48,7 @@ namespace Game
                     _originalColor = rend.material.color;
                 }
                 _timer -= beat;
-                _beatCount = _beatCount +1;
+                //_beatCount = _beatCount +1;
             }
             _timer += Time.deltaTime;
         }
