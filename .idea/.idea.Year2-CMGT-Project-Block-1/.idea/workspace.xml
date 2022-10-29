@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_rightboxingglove.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_rightboxingglove.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
