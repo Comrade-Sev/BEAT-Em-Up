@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_rightboxingglove.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_rightboxingglove.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/DebugLog.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/DebugLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,6 +84,7 @@
       <workItem from="1666547787208" duration="8086000" />
       <workItem from="1666600333195" duration="1982000" />
       <workItem from="1666789707483" duration="1281000" />
+      <workItem from="1667068994635" duration="2969000" />
     </task>
     <servers />
   </component>
