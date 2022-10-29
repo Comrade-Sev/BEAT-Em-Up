@@ -7,26 +7,23 @@ namespace Game
     public class CubeSpawner : MonoBehaviour
     {
         public GameObject prefab;
-        public float beatInterval = 2;
-        public float beat = 0;
-        
-        //NOTE: This was for earlier when I thought we wanted to make something similar to beat saber so blocks needed
-        //to be spawned in spontaneously. 
+        public float BeatInterval = 2;
+        public float Beat = 0;
 
-        void Start()
+        void start()
         {
             Instantiate(prefab, new Vector3(1 * 2.0f, 0, 0), Quaternion.identity);
             print("Hello!");
-            Debug.Log(beat);
+            Debug.Log(Beat);
         }
-        void Update()
+        void update()
         {
-            beat += Time.deltaTime;
-            Debug.Log(beat);
+            Beat += Time.deltaTime;
+            Debug.Log(Beat);
             print("Hello!");
-            if (beat >= beatInterval)
+            if (Beat >= BeatInterval)
             {
-                beat = 0;
+                Beat = 0;
                 Instantiate(prefab, new Vector3(1 * 2.0f, 0, 0), Quaternion.identity);
                 Debug.Log("WhileCheck");
             }

@@ -10,8 +10,8 @@ namespace Game
         public Material colour;
         private float _timer;
         public float beat = (60 / 90);
-        Renderer _rend;
-        Color _currentColor;
+        Renderer rend;
+        Color currentColor;
         Color _originalColor;
         private float _beatCount;
 
@@ -19,39 +19,36 @@ namespace Game
         void Awake()
         {
             toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
-            _rend = gameObject.GetComponent<Renderer>();
-            _originalColor = _rend.material.color;
+            rend = gameObject.GetComponent<Renderer>();
+            _originalColor = rend.material.color;
         }
 
         void OnTriggerEnter(Collider collision)
         {
-            Debug.Log(_rend.material.color);
-            if (_timer > 0.7 * beat || _timer < 0.1f)
+            Debug.Log(rend.material.color);
+            if (_timer > 0.8 * beat || _timer < 0.1f)
             {
-                _rend.material.color = Color.green;
-                //Debug.Log();
+                rend.material.color = Color.green;
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
         
         void Update()
         {
-            Debug.Log(beat);
             if(_timer>beat)
             {
-                if(_rend.material.color == _originalColor)
+                if(rend.material.color == _originalColor)
                 {
-                    _rend.material.color = Color.red;
-                    _originalColor = _rend.material.color;
+                    rend.material.color = Color.red;
+                    currentColor = rend.material.color;
                 }
                 else
                 {
-                    _rend.material.color = Color.blue;
-                    _originalColor = _rend.material.color;
+                    rend.material.color = Color.blue;
+                    _originalColor = rend.material.color;
                 }
                 _timer -= beat;
-                //_beatCount = _beatCount +1;
-                
+                _beatCount = _beatCount +1;
             }
             _timer += Time.deltaTime;
         }
