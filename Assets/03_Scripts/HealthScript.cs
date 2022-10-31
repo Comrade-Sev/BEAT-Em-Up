@@ -11,6 +11,7 @@ namespace Game
 
         public float _CurrentHealth = 100f;
 
+        public float Damage = 10f;
         public float CurrentHealth
         {
             get { return _CurrentHealth; }
@@ -23,6 +24,11 @@ namespace Game
                     Destroy(gameObject);
                 }
             }
+        }
+
+        public void GetHit()
+        {
+            CurrentHealth = CurrentHealth - Damage;
         }
 
         void Start()

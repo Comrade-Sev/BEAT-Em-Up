@@ -6,6 +6,8 @@ namespace Game
 {
     public class BeatManager : MonoBehaviour
     {
+        public HealthScript health;
+        public float Damage = 10f;
         public GameObject toBeAttacked;
         public Material colour;
         private float _timer;
@@ -26,9 +28,11 @@ namespace Game
         void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
+            Debug.Log(health._CurrentHealth);
             if (_timer > 0.8 * beat || _timer < 0.1f)
             {
                 rend.material.color = Color.green;
+                health.GetHit();
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
