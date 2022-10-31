@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="" />
+    <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +86,7 @@
       <workItem from="1666789707483" duration="1281000" />
       <workItem from="1667073628418" duration="993000" />
       <workItem from="1667150352354" duration="711000" />
+      <workItem from="1667207483750" duration="698000" />
     </task>
     <servers />
   </component>
