@@ -20,10 +20,12 @@ namespace Game
         public BeatManager bm;
         public int StateChangeAmount = 5;
         public int currentAmount = 0;
+        //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
         // Start is called before the first frame update
         void Start()
         {
             FindObjectOfType<BeatManager>().BeatHappened.AddListener(OnBeat);
+            //This makes it so that the void OnBeat can notice when it needs to switch states
         }
 
         // Update is called once per frame
@@ -63,22 +65,13 @@ namespace Game
                     }
                     break;
             }
-            if (bm._beatCount % 5 == 0)
-            {
-                
-                //Debug.Log("beatcount: " + bm._beatCount + "Currentstate: " + states);            
-            }
-            //else if ((bm._beatCount % 5 == 0) && (states == states.BlockState))
-            //{
-            //    states = states.IdleState;
-            //}
-            //Debug.Log(states);
         }
 
         void OnBeat()
         {
             currentAmount++;
             if(currentAmount > StateChangeAmount)
+            //If current amount reaches the beat amount of StateChangeAmount it tells it to change state and reset the value of currentAmount
             {
                 if (states == states.IdleState)
                 {

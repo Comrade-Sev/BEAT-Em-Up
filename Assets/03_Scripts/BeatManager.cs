@@ -19,6 +19,7 @@ namespace Game
         public float _beatCount;
         public bool Hit;
         public UnityEvent BeatHappened;
+        //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
         void Awake()
@@ -61,6 +62,7 @@ namespace Game
                     }
                     _timer -= beat;
                     BeatHappened.Invoke();
+                    //If a beat happened then BeatHappened logs it and sends that into the Statez script so we know when a beat happened
                     //_beatCount = _beatCount + 1;
                 }
                 _timer += Time.deltaTime;
