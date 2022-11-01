@@ -2543,9 +2543,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1992271261}
+  Damage: 10
   toBeAttacked: {fileID: 1992271249}
   colour: {fileID: 0}
   beat: 0.54545456
+  _beatCount: 0
+  Hit: 0
 --- !u!114 &1992271261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,6 +2564,40 @@ MonoBehaviour:
   StartingHealth: 100
   _CurrentHealth: 100
   Damage: 10
+--- !u!114 &1992271267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992271249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1dcef90a6ab42429ce78d0b2127ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1992271261}
+  bm: {fileID: 1992271255}
+--- !u!95 &1992271273
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992271249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &853265468926975879
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -15,7 +16,9 @@ namespace Game
         Renderer rend;
         Color currentColor;
         Color _originalColor;
-        private float _beatCount;
+        public float _beatCount;
+        public bool Hit;
+        public UnityEvent BeatHappened;
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
         void Awake()
@@ -23,6 +26,7 @@ namespace Game
             toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
             rend = gameObject.GetComponent<Renderer>();
             _originalColor = rend.material.color;
+            BeatHappened = new UnityEvent();
         }
 
         void OnTriggerEnter(Collider collision)
@@ -31,30 +35,36 @@ namespace Game
             Debug.Log(health._CurrentHealth);
             if (_timer > 0.8 * beat || _timer < 0.1f)
             {
+                Hit = true;
                 rend.material.color = Color.green;
                 health.GetHit();
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
-        
-        void Update()
+
+        private void FixedUpdate()
         {
-            if(_timer>beat)
+
             {
-                if(rend.material.color == _originalColor)
+                //Debug.Log(health.Damage);
+                if (_timer > beat)
                 {
-                    rend.material.color = Color.red;
-                    currentColor = rend.material.color;
+                    if (rend.material.color == _originalColor)
+                    {
+                        rend.material.color = Color.red;
+                        currentColor = rend.material.color;
+                    }
+                    else
+                    {
+                        rend.material.color = Color.blue;
+                        _originalColor = rend.material.color;
+                    }
+                    _timer -= beat;
+                    BeatHappened.Invoke();
+                    //_beatCount = _beatCount + 1;
                 }
-                else
-                {
-                    rend.material.color = Color.blue;
-                    _originalColor = rend.material.color;
-                }
-                _timer -= beat;
-                //_beatCount = _beatCount +1;
+                _timer += Time.deltaTime;
             }
-            _timer += Time.deltaTime;
         }
     }
 }
