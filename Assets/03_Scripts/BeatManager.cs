@@ -13,15 +13,11 @@ namespace Game
         Renderer rend;
         Color currentColor;
         Color _originalColor;
-<<<<<<< Updated upstream
-        private float _beatCount;
-=======
         public float _beatCount;
         public bool Hit;
         public UnityEvent BeatHappened;
         public HealthBar healthBar;
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
->>>>>>> Stashed changes
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
         void Awake()
@@ -29,11 +25,8 @@ namespace Game
             toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
             rend = gameObject.GetComponent<Renderer>();
             _originalColor = rend.material.color;
-<<<<<<< Updated upstream
-=======
             BeatHappened = new UnityEvent();
 
->>>>>>> Stashed changes
         }
 
         void OnTriggerEnter(Collider collision)
@@ -42,11 +35,8 @@ namespace Game
             if (_timer > 0.8 * beat || _timer < 0.1f)
             {
                 rend.material.color = Color.green;
-<<<<<<< Updated upstream
-=======
                 health.GetHit();
                 healthBar.SetHealth(health._CurrentHealth);
->>>>>>> Stashed changes
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
