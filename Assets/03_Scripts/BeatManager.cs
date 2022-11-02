@@ -20,6 +20,7 @@ namespace Game
         public float _beatCount;
         public bool Hit;
         public UnityEvent BeatHappened;
+        public HealthBar healthBar;
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
@@ -34,6 +35,15 @@ namespace Game
         void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
+            Debug.Log(health._CurrentHealth);
+            if (_timer > 0.8 * beat || _timer < 0.1f)
+            {
+                Hit = true;
+                rend.material.color = Color.green;
+                health.GetHit();
+                healthBar.SetHealth(health._CurrentHealth);
+            }
+            //gameObject.GetComponent<MeshRenderer>().material = colour;
             Debug.Log(OppHealth._CurrentHealth);
             while (GameObject.FindGameObjectWithTag("ToBeDestroyed"))
             {
