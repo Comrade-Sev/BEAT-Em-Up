@@ -19,6 +19,7 @@ namespace Game
         public float _beatCount;
         public bool Hit;
         public UnityEvent BeatHappened;
+        public HealthBar healthBar;
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
@@ -39,6 +40,7 @@ namespace Game
                 Hit = true;
                 rend.material.color = Color.green;
                 health.GetHit();
+                healthBar.SetHealth(health._CurrentHealth);
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
