@@ -7,7 +7,6 @@ namespace Game
     public class BeatManager : MonoBehaviour
     {
         public HealthScript health;
-        public float Damage = 10f;
         public GameObject toBeAttacked;
         public Material colour;
         private float _timer;
@@ -52,7 +51,7 @@ namespace Game
                     _originalColor = rend.material.color;
                 }
                 _timer -= beat;
-                //_beatCount = _beatCount +1;
+                _beatCount = _beatCount +1;
             }
             _timer += Time.deltaTime;
         }

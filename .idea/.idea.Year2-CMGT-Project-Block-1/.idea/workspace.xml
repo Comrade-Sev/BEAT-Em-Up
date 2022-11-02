@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skyboxes/Post_processed_darkness.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skyboxes/Post_processed_darkness.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/DebugLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -86,6 +89,7 @@
       <workItem from="1666600333195" duration="1982000" />
       <workItem from="1666789707483" duration="1281000" />
       <workItem from="1667073628418" duration="993000" />
+      <workItem from="1667344946180" duration="2373000" />
     </task>
     <servers />
   </component>
