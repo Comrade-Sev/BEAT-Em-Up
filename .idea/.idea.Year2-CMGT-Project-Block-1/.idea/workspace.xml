@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skyboxes/Post_processed_darkness.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skyboxes/Post_processed_darkness.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +87,7 @@
       <workItem from="1666789707483" duration="1281000" />
       <workItem from="1667073628418" duration="993000" />
       <workItem from="1667344946180" duration="2373000" />
+      <workItem from="1667386748733" duration="1252000" />
     </task>
     <servers />
   </component>

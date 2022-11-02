@@ -586,6 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf028f18a8e1f94fb6a6e89ece40218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSource: {fileID: 0}
   StartingHealth: 100
   _CurrentHealth: 100
   Damage: 10
@@ -2923,9 +2924,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1992271261}
+  Damage: 10
   toBeAttacked: {fileID: 1992271249}
   colour: {fileID: 0}
   beat: 0.54545456
+  _beatCount: 0
+  Hit: 0
+  BeatHappened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1992271261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,7 +2960,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 63c0ee4f763a60f4eb8751941549c3e3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.291
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -7,7 +7,8 @@ namespace Game
 {
     public class BeatManager : MonoBehaviour
     {
-        public HealthScript health;
+        public HealthScript OppHealth;
+        public PlayerHealth playerHealth;
         public float Damage = 10f;
         public GameObject toBeAttacked;
         public Material colour;
@@ -33,39 +34,47 @@ namespace Game
         void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
-            Debug.Log(health._CurrentHealth);
-            if (_timer > 0.8 * beat || _timer < 0.1f)
+            Debug.Log(OppHealth._CurrentHealth);
+            while (GameObject.FindGameObjectWithTag("ToBeDestroyed"))
             {
-                Hit = true;
-                rend.material.color = Color.green;
-                health.GetHit();
+                if (_timer > 0.8 * beat || _timer < 0.1f)
+                {
+                    Hit = true;
+                    rend.material.color = Color.green;
+                    OppHealth.GetHit();
+                }
+                //gameObject.GetComponent<MeshRenderer>().material = colour;
             }
-            //gameObject.GetComponent<MeshRenderer>().material = colour;
         }
 
         private void FixedUpdate()
         {
 
             {
-                //Debug.Log(health.Damage);
-                if (_timer > beat)
+                //Debug.Log(OppHealth.Damage);
+                while (GameObject.FindGameObjectWithTag("ToBeDestroyed"))
                 {
-                    if (rend.material.color == _originalColor)
+                    if (_timer > beat)
                     {
-                        rend.material.color = Color.red;
-                        currentColor = rend.material.color;
+                        if (rend.material.color == _originalColor)
+                        {
+                            rend.material.color = Color.red;
+                            currentColor = rend.material.color;
+                        }
+                        else
+                        {
+                            rend.material.color = Color.blue;
+                            _originalColor = rend.material.color;
+                        }
+
+                        _timer -= beat;
+                        BeatHappened.Invoke();
+                        //If a beat happened then BeatHappened logs it and sends that into the Statez script so we know when a beat happened
+                        //_beatCount = _beatCount + 1;
                     }
-                    else
-                    {
-                        rend.material.color = Color.blue;
-                        _originalColor = rend.material.color;
-                    }
-                    _timer -= beat;
-                    BeatHappened.Invoke();
-                    //If a beat happened then BeatHappened logs it and sends that into the Statez script so we know when a beat happened
-                    //_beatCount = _beatCount + 1;
+
+                    _timer += Time.deltaTime;
                 }
-                _timer += Time.deltaTime;
             }
         }
     }
