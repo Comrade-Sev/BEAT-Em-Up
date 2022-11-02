@@ -7,7 +7,8 @@ namespace Game
     public enum states
     {
         IdleState,
-        BlockState
+        BlockState,
+        AttackState
     }
 
     public class Statez : MonoBehaviour
@@ -64,6 +65,14 @@ namespace Game
                         }
                     }
                     break;
+
+                case states.AttackState:
+                {
+                    health.Damage = 10f;
+                    
+                    
+                }
+                    break;
             }
         }
 
@@ -77,13 +86,17 @@ namespace Game
                 {
                     states = states.BlockState;
                 }
-                else
+                else if (states == states.BlockState)
+                {
+                    states = states.AttackState;
+                }
+                else if (states == states.AttackState)
                 {
                     states = states.IdleState;
                 }
                 currentAmount = 0;
             }
-            Debug.Log("Beat happened" + health.Damage);
+            //Debug.Log("Beat happened" + health.Damage);
         }
 
 
