@@ -16,10 +16,12 @@ namespace Game
 
 
         states states = states.IdleState;
-        public HealthScript health;
+        public HealthScript oppHealth;
+        public PlayerHealth playerHealth;
         public oppPunch attackPlayer;
         private Animator anim;
         public BeatManager bm;
+        public float bugg = 2;
        
         //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
         // Start is called before the first frame update    
@@ -40,7 +42,7 @@ namespace Game
                 case states.IdleState:
                     //anim = gameObject.GetComponent<Animator>();
                     //anim.Play("idle");
-                    health.Damage = 5f;
+                    oppHealth.Damage = 5f;
                     if (bm.Hit == true)
                     {
                        // anim = gameObject.GetComponent<Animator>();
@@ -58,7 +60,7 @@ namespace Game
                         //anim = gameObject.GetComponent<Animator>();
                         //anim.Play("block");
                         //if damage stays 0 revert damage back to original damage.
-                        health.Damage = 0f;
+                        oppHealth.Damage = 0f;
                         //plays the block animation
                         if (bm.Hit == true)
                         {
@@ -72,9 +74,13 @@ namespace Game
 
                 case states.AttackState:
                 {
-                    health.Damage = 5f;
-                    
-                    
+                    oppHealth.Damage = 5f;
+                    /*for (states = states.AttackState)
+                    {
+                        oppPunch.triggered = true;
+                        
+                    }*/
+
                 }
                     break;
             }
@@ -100,7 +106,7 @@ namespace Game
                 }
                 currentAmount = 0;
             }
-            //Debug.Log("Beat happened" + health.Damage);
+            //Debug.Log("Beat happened" + oppHealth.Damage);
         }
 
 
