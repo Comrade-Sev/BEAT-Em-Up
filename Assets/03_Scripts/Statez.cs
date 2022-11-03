@@ -40,7 +40,7 @@ namespace Game
                 case states.IdleState:
                     //anim = gameObject.GetComponent<Animator>();
                     //anim.Play("idle");
-                    health.Damage = 10f;
+                    health.Damage = 5f;
                     if (bm.Hit == true)
                     {
                        // anim = gameObject.GetComponent<Animator>();
@@ -54,6 +54,7 @@ namespace Game
                     break;
                 case states.BlockState:
                     {
+                        Debug.Log("blocked");
                         //anim = gameObject.GetComponent<Animator>();
                         //anim.Play("block");
                         //if damage stays 0 revert damage back to original damage.
@@ -71,7 +72,7 @@ namespace Game
 
                 case states.AttackState:
                 {
-                    health.Damage = 10f;
+                    health.Damage = 5f;
                     
                     
                 }

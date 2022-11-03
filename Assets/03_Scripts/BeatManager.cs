@@ -41,23 +41,25 @@ namespace Game
         void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
-            Debug.Log(OppHealth._CurrentHealth);
+            
             if (_timer > 0.8 * beat || _timer < 0.2f)
             {
                 Hit = true;
                 source.PlayOneShot(hitSound);
+                Debug.Log(OppHealth._CurrentHealth);
+                Debug.Log(Hit);
                 rend.material.color = Color.green;
                 OppHealth.GetHit();
-                healthBar.SetHealth(OppHealth._CurrentHealth);
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
-            Debug.Log(OppHealth._CurrentHealth);
+            //Debug.Log(OppHealth._CurrentHealth);
         }
 
         private void FixedUpdate()
         {
 
             {
+                healthBar.SetHealth(OppHealth._CurrentHealth);
                 //Debug.Log(OppHealth.Damage);
                 if (_timer > beat)
                     {
