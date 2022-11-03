@@ -8,8 +8,7 @@ namespace Game
     public class BeatManager : MonoBehaviour
     {
         public HealthScript OppHealth;
-        public PlayerHealth playerHealth;
-        
+
         public float Damage = 10f;
         public GameObject toBeAttacked;
         public Material colour;
@@ -60,7 +59,7 @@ namespace Game
 
             {
                 healthBar.SetHealth(OppHealth._CurrentHealth);
-                //Debug.Log(OppHealth.Damage);
+                //Debug.Log(OppHealth.playerDamage);
                 if (_timer > beat)
                     {
                         if (rend.material.color == _originalColor)

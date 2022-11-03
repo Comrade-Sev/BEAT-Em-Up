@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3519054678148519226}
   m_Layer: 0
   m_Name: final_boxxing_glove_right
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

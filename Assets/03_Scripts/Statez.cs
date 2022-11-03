@@ -21,8 +21,8 @@ namespace Game
         public oppPunch attackPlayer;
         private Animator anim;
         public BeatManager bm;
-        public float bugg = 2;
-       
+        public bool Ready = false;
+
         //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
         // Start is called before the first frame update    
         public int StateChangeAmount = 5;
@@ -40,6 +40,7 @@ namespace Game
             switch (states)
             {
                 case states.IdleState:
+                    Ready = true;
                     //anim = gameObject.GetComponent<Animator>();
                     //anim.Play("idle");
                     oppHealth.Damage = 5f;
@@ -75,6 +76,15 @@ namespace Game
                 case states.AttackState:
                 {
                     oppHealth.Damage = 5f;
+                    if (Ready == true)
+                    {
+                        Ready = false;
+                        attackPlayer.triggered = true;
+                    }
+                    else
+                    {
+                        attackPlayer.triggered = false;
+                    }
                     /*for (states = states.AttackState)
                     {
                         oppPunch.triggered = true;
@@ -106,7 +116,7 @@ namespace Game
                 }
                 currentAmount = 0;
             }
-            //Debug.Log("Beat happened" + oppHealth.Damage);
+            //Debug.Log("Beat happened" + oppHealth.playerDamage);
         }
 
 

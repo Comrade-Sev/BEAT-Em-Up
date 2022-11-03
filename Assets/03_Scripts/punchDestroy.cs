@@ -10,9 +10,12 @@ namespace Game
 
         void OnTriggerEnter(Collider collision)
         {
-            Destroy(gameObject);
-            playerHealth.GetHit();
-            Debug.Log("beat");
+            if (collision.tag == "Player")
+            {
+                Destroy(gameObject);
+                playerHealth.GetHit();
+                Debug.Log(playerHealth._CurrentHealth);
+            }
         }
     }
 }    
