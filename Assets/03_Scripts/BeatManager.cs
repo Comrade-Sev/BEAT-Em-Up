@@ -12,6 +12,7 @@ namespace Game
         
         public float Damage = 10f;
         public GameObject toBeAttacked;
+        public GameObject hitEffect;
         public Material colour;
         private float _timer;
         public float beat = (60 / 90);
@@ -24,9 +25,9 @@ namespace Game
         public bool Hit;
         public UnityEvent BeatHappened;
         public HealthBar healthBar;
-
         public AudioSource source;
         public AudioClip hitSound;
+        
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
@@ -49,6 +50,7 @@ namespace Game
                 rend.material.color = Color.green;
                 OppHealth.GetHit();
                 healthBar.SetHealth(OppHealth._CurrentHealth);
+                Instantiate(hitEffect);
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
             Debug.Log(OppHealth._CurrentHealth);
