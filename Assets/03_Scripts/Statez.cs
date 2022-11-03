@@ -17,12 +17,15 @@ namespace Game
 
         states states = states.IdleState;
         public HealthScript health;
+        public oppPunch attackPlayer;
         private Animator anim;
         public BeatManager bm;
+       
+        //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
+        // Start is called before the first frame update    
         public int StateChangeAmount = 5;
         public int currentAmount = 0;
-        //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
-        // Start is called before the first frame update
+
         void Start()
         {
             FindObjectOfType<BeatManager>().BeatHappened.AddListener(OnBeat);

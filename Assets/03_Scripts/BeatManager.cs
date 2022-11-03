@@ -45,7 +45,7 @@ namespace Game
             if (_timer > 0.8 * beat || _timer < 0.2f)
             {
                 Hit = true;
-                //source.PlayOneShot(hitSound);
+                source.PlayOneShot(hitSound);
                 rend.material.color = Color.green;
                 OppHealth.GetHit();
                 healthBar.SetHealth(OppHealth._CurrentHealth);

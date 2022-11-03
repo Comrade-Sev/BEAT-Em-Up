@@ -1021,7 +1021,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 768356528}
-  - component: {fileID: 768356527}
   m_Layer: 0
   m_Name: Punch Spawn Point
   m_TagString: Untagged
@@ -1029,18 +1028,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &768356527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768356526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed8531a944fd2d42b8c00c6a2391224, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &768356528
 Transform:
   m_ObjectHideFlags: 0
@@ -1416,7 +1403,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 2716796623748874086, guid: e07e3750605eacf48971827d71886d6b,
+  m_ModelPrefab: {fileID: 3989213903086514900, guid: 5c1b8928ce1412846a509dd077d8ec60,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -1950,6 +1937,36 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: -2695635216729205552, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
+    - target: {fileID: -2695635216729205552, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
+    - target: {fileID: -2695635216729205552, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
+    - target: {fileID: -271192532247966138, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
+    - target: {fileID: -271192532247966138, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
+    - target: {fileID: -271192532247966138, guid: 22cd4e536be308841be046ad60481af8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d8341ea184b5a4468e124da97ea6f52, type: 2}
     - target: {fileID: 919132149155446097, guid: 22cd4e536be308841be046ad60481af8,
         type: 3}
       propertyPath: m_Name
@@ -2483,7 +2500,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 891098173353845367, guid: 5b9f071ca11f5d34880ca336e36a291e,
+  m_ModelPrefab: {fileID: 1834889761785389046, guid: 50de4abc25bca6e4ba4e7f6c09a4e6a6,
     type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
@@ -3125,7 +3142,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 94507959}
-  m_PlaneDistance: 3.3
+  m_PlaneDistance: 1.96
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4019,9 +4036,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 4274597077567516645}
+  attackPlayer: {fileID: 0}
   bm: {fileID: 4274597077567516646}
   StateChangeAmount: 5
   currentAmount: 0
+--- !u!95 &4274597077567516652
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466007857867388254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4981556372266239234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4247,7 +4285,7 @@ PrefabInstance:
     - target: {fileID: 5384336313199530837, guid: bd7c3a002846e7d47af3c3e82f19a55d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.184
+      value: -9.586
       objectReference: {fileID: 0}
     - target: {fileID: 5384336313199530837, guid: bd7c3a002846e7d47af3c3e82f19a55d,
         type: 3}
