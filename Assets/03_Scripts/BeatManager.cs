@@ -8,8 +8,7 @@ namespace Game
     public class BeatManager : MonoBehaviour
     {
         public HealthScript OppHealth;
-        public PlayerHealth playerHealth;
-        
+
         public float Damage = 10f;
         public GameObject toBeAttacked;
         public GameObject hitEffect;
@@ -42,25 +41,28 @@ namespace Game
         void OnTriggerEnter(Collider collision)
         {
             Debug.Log(rend.material.color);
-            Debug.Log(OppHealth._CurrentHealth);
+            
             if (_timer > 0.8 * beat || _timer < 0.2f)
             {
                 Hit = true;
                 source.PlayOneShot(hitSound);
+                Debug.Log(OppHealth._CurrentHealth);
+                Debug.Log(Hit);
                 rend.material.color = Color.green;
                 OppHealth.GetHit();
                 healthBar.SetHealth(OppHealth._CurrentHealth);
                 Instantiate(hitEffect);
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
-            Debug.Log(OppHealth._CurrentHealth);
+            //Debug.Log(OppHealth._CurrentHealth);
         }
 
         private void FixedUpdate()
         {
 
             {
-                //Debug.Log(OppHealth.Damage);
+                healthBar.SetHealth(OppHealth._CurrentHealth);
+                //Debug.Log(OppHealth.playerDamage);
                 if (_timer > beat)
                     {
                         if (rend.material.color == _originalColor)
