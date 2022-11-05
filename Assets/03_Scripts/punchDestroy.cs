@@ -10,12 +10,27 @@ namespace Game
 
         void OnTriggerEnter(Collider collision)
         {
-            if (collision.tag == "Player")
+            //the box collider of the instantiated punch will check the tag each time before it decides to do anything
+            if (collision.CompareTag("Player"))
+            {
+                playerHealth.GetHit();
+                for (int i = 0; i < 2; i++) 
+                {
+                    Destroy(gameObject);
+                }
+            }
+
+            if (collision.CompareTag("HostileObject"))
             {
                 Destroy(gameObject);
-                playerHealth.GetHit();
-                Debug.Log(playerHealth._CurrentHealth);
             }
+
+            if (collision.CompareTag("DamageBlock"))
+            {
+                
+            }
+                
+            
         }
     }
 }    

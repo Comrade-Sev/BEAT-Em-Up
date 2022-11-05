@@ -29,7 +29,7 @@ namespace Game
                 light1.enabled = false;
                 light2.enabled = true;
                 //return;
-                Debug.Log(light1.enabled = false);
+                //Debug.Log(light1.enabled = false);
             }
             else if (light2.enabled)
             {
