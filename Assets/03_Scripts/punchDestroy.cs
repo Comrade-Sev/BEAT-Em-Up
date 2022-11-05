@@ -13,6 +13,8 @@ namespace Game
             //the box collider of the instantiated punch will check the tag each time before it decides to do anything
             if (collision.CompareTag("Player"))
             {
+                // if the punch hits anything with the tag "Player" it will take away health from the PlayerHealth.cs script
+                //given that the script is embedded in correctly ofcourse
                 playerHealth.GetHit();
                 for (int i = 0; i < 2; i++) 
                 {
