@@ -65,15 +65,15 @@ namespace Game
                 //Debug.Log(OppHealth.playerDamage);
                 if (_timer > beat)
                     {
-                        if (rend.material.color == _originalColor)
+                        //if (rend.material.color == _originalColor)
                         {
-                            rend.material.color = Color.red;
-                            currentColor = rend.material.color;
+                            //rend.material.color = Color.red;
+                            //currentColor = rend.material.color;
                         }
-                        else
+                        //else
                         {
-                            rend.material.color = Color.blue;
-                            _originalColor = rend.material.color;
+                            //rend.material.color = Color.blue;
+                            //_originalColor = rend.material.color;
                         }
 
                         _timer -= beat;

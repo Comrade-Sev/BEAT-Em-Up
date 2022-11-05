@@ -57,7 +57,7 @@ namespace Game
                     break;
                 case states.BlockState:
                     {
-                        Debug.Log("blocked");
+                        //Debug.Log("blocked");
                         //anim = gameObject.GetComponent<Animator>();
                         //anim.Play("block");
                         //if damage stays 0 revert damage back to original damage.
