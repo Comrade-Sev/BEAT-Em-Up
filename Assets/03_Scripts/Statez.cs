@@ -105,11 +105,11 @@ namespace Game
                     {
                         //anim = gameObject.GetComponent<Animator>();
                         //anim.Play("pary");
-                        oppHealth.Damage = 10f;
-                        if (bm.Hit == true)
+                        oppHealth.playerDamage = 10f;
+                        if (bm.hit == true)
                         {
                             states = states.IdleState;
-                            bm.Hit = false;
+                            bm.hit = false;
                         }
 
                     }
