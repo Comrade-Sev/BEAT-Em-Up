@@ -61,10 +61,10 @@ namespace Game
                     Destroy(hitTrue, 0.5f);
                 }
 
-                if (Input.GetKeyDown(KeyCode.Q))
+                /*if (Input.GetKeyDown(KeyCode.Q))
                 {
                     InputVR = true;
-                }
+                }*/
             }
             //rend.material.color = Color.green;
             //gameObject.GetComponent<MeshRenderer>().material = colour;
@@ -99,8 +99,13 @@ namespace Game
                     //_beatCount = _beatCount + 1;
                     
                 }
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    InputVR = true;
+                }
 
                 _timer += Time.deltaTime;
+                //Debug.Log(InputVR);
             }
         }
     }
