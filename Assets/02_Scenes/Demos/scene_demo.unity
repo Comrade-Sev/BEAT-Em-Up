@@ -3638,11 +3638,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1dcef90a6ab42429ce78d0b2127ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oppHealth: {fileID: 4274597077567516645}
+  oppHealth: {fileID: 1944391106}
   playerHealth: {fileID: 1314372543}
   attackPlayer: {fileID: 768356529}
   pd: {fileID: 1556118503}
-  bm: {fileID: 4274597077567516646}
+  bm: {fileID: 1944391105}
   Ready: 0
   StateChangeAmount: 5
   currentAmount: 0
@@ -3658,7 +3658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556569bdd660fae49810524a2ba5d40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OppHealth: {fileID: 4274597077567516645}
+  OppHealth: {fileID: 1944391106}
   Damage: 10
   toBeAttacked: {fileID: 1944391103}
   hitEffect: {fileID: 952929877259166609, guid: 3a4d141afeffd274bb113b35469d5057,
