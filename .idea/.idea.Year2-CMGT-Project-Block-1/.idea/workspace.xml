@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/punchDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/punchDestroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/HealthScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Statez.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Statez.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +96,7 @@
       <workItem from="1667510278212" duration="963000" />
       <workItem from="1667659236753" duration="12098000" />
       <workItem from="1667694535323" duration="3816000" />
+      <workItem from="1667734920826" duration="1712000" />
     </task>
     <servers />
   </component>

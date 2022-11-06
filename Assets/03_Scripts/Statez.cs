@@ -30,7 +30,7 @@ namespace Game
 
         void Start()
         {
-            FindObjectOfType<BeatManager>().BeatHappened.AddListener(OnBeat);
+            FindObjectOfType<BeatManager>().beatHappened.AddListener(OnBeat);
             //This makes it so that the void OnBeat can notice when it needs to switch states
         }
 
@@ -43,12 +43,12 @@ namespace Game
                     Ready = true;
                     //anim = gameObject.GetComponent<Animator>();
                     //anim.Play("idle");
-                    oppHealth.Damage = 5f;
-                    if (bm.Hit == true)
+                    oppHealth.playerDamage = 5f;
+                    if (bm.hit == true)
                     {
                        // anim = gameObject.GetComponent<Animator>();
                         //anim.Play("hit");
-                        bm.Hit = false;
+                        bm.hit = false;
                     }
 
                     //This is supposed to play the idle animation
@@ -61,13 +61,13 @@ namespace Game
                         //anim = gameObject.GetComponent<Animator>();
                         //anim.Play("block");
                         //if damage stays 0 revert damage back to original damage.
-                        oppHealth.Damage = 0f;
+                        oppHealth.playerDamage = 0f;
                         //plays the block animation
-                        if (bm.Hit == true)
+                        if (bm.hit == true)
                         {
                             //anim = gameObject.GetComponent<Animator>();
                             //anim.Play("blockhit");
-                            bm.Hit = false;
+                            bm.hit = false;
 
                         }
                     }
@@ -75,7 +75,7 @@ namespace Game
 
                 case states.AttackState:
                 {
-                    oppHealth.Damage = 5f;
+                    oppHealth.playerDamage = 5f;
                     if (Ready == true)
                     {
                         Ready = false;

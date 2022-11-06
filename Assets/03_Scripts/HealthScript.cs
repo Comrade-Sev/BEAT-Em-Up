@@ -7,19 +7,19 @@ namespace Game
     public class HealthScript : MonoBehaviour
     {
 
-        public float StartingHealth = 100f;
+        public float startingHealth = 100f;
 
-        public float _CurrentHealth = 100f;
+        public float currentHealth = 100f;
 
-        public float Damage = 10f;
+        public float playerDamage = 5f;
         public float CurrentHealth
         {
-            get { return _CurrentHealth; }
+            get { return currentHealth; }
             set
             {
-                _CurrentHealth = Mathf.Clamp(value,0f,100f);
+                currentHealth = Mathf.Clamp(value,0f,100f);
 
-                if(_CurrentHealth <= 0f)
+                if(currentHealth <= 0f)
                 {
                     Destroy(gameObject);
                 }
@@ -28,12 +28,12 @@ namespace Game
 
         public void GetHit()
         {
-            CurrentHealth = CurrentHealth - Damage;
+            CurrentHealth = CurrentHealth - playerDamage;
         }
 
         void Start()
         {
-            CurrentHealth = StartingHealth;
+            CurrentHealth = startingHealth;
         }
         
     }
