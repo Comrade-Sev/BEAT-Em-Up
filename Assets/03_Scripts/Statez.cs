@@ -44,13 +44,16 @@ namespace Game
             {
                 case states.IdleState:
                     Ready = true;
-                    //anim = gameObject.GetComponent<Animator>();
-                    //anim.Play("idle");
+                    //anim.SetBool("isStun", false);
+                    anim = gameObject.GetComponent<Animator>();
+                    anim.Play("enemy_done|Idle");
                     oppHealth.playerDamage = 5f;
                     if (bm.hit == true)
                     {
-                       // anim = gameObject.GetComponent<Animator>();
-                        //anim.Play("hit");
+                        //anim.SetBool("isIdle", false);
+                        //anim.SetBool("isHit", true);
+                        anim = gameObject.GetComponent<Animator>();
+                        anim.Play("enemy_done|hit");
                         bm.hit = false;
                     }
 
@@ -60,16 +63,21 @@ namespace Game
                     break;
                 case states.BlockState:
                     {
+                        //anim.SetBool("isHit", false);
                         //Debug.Log("blocked");
-                        //anim = gameObject.GetComponent<Animator>();
-                        //anim.Play("block");
-                        //if damage stays 0 revert damage back to original damage.
-                        oppHealth.playerDamage = 0f;
-                        //plays the block animation
+                        anim.SetBool("isBlock", true);
+                            anim = gameObject.GetComponent<Animator>();
+                            anim.Play("enemy_done|block");
+                            //if damage stays 0 revert damage back to original damage.
+                            oppHealth.playerDamage = 0f;
+                            //plays the block animation
+                    
                         if (bm.hit == true)
                         {
-                            //anim = gameObject.GetComponent<Animator>();
-                            //anim.Play("blockhit");
+                            //anim.SetBool("isBlock", false);
+                            //anim.SetBool("isBlockHit", true);
+                            anim = gameObject.GetComponent<Animator>();
+                            anim.Play("enemy_done|block_hit");
                             bm.hit = false;
 
                         }
@@ -78,12 +86,16 @@ namespace Game
 
                 case states.AttackState:
                 {
-                    oppHealth.playerDamage = 5f;
+                        anim.SetBool("isBlock", false);
+                        //anim.SetBool("isBlockHit", false);
+                        oppHealth.playerDamage = 5f;
                     if (Ready == true)
                     {
                         Ready = false;
                         attackPlayer.triggered = true;
-                    }
+                        anim = gameObject.GetComponent<Animator>();
+                        anim.Play("enemy_done|punch_right");
+                        }
                     else
                     {
                         attackPlayer.triggered = false;
@@ -105,8 +117,9 @@ namespace Game
 
                 case states.ParryState:
                     {
-                        //anim = gameObject.GetComponent<Animator>();
-                        //anim.Play("pary");
+                        anim.SetBool("isStun", true);
+                        anim = gameObject.GetComponent<Animator>();
+                        anim.Play("enemy_done|stunned");
                         oppHealth.playerDamage = 10f;
                         if (bm.hit == true)
                         {
