@@ -125,18 +125,19 @@ namespace Game
             if(currentAmount > StateChangeAmount)
             //If current amount reaches the beat amount of StateChangeAmount it tells it to change state and reset the value of currentAmount
             {
-                if (states == states.IdleState)
+                switch (states)
                 {
-                    states = states.BlockState;
+                    case states.IdleState:
+                        states = states.BlockState;
+                        break;
+                    case states.BlockState:
+                        states = states.AttackState;
+                        break;
+                    case states.AttackState:
+                        states = states.IdleState;
+                        break;
                 }
-                else if (states == states.BlockState)
-                {
-                    states = states.AttackState;
-                }
-                else if (states == states.AttackState)
-                {
-                    states = states.IdleState;
-                }
+
                 currentAmount = 0;
             }
             Debug.Log("Beat happened" + oppHealth.playerDamage);
