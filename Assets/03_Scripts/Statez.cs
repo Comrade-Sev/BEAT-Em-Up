@@ -34,6 +34,7 @@ namespace Game
         void Start()
         {
             FindObjectOfType<BeatManager>().beatHappened.AddListener(OnBeat);
+            anim = gameObject.GetComponent<Animator>();
             //This makes it so that the void OnBeat can notice when it needs to switch states
         }
 
@@ -61,8 +62,7 @@ namespace Game
                 case states.BlockState:
                     {
                         //Debug.Log("blocked");
-                        //anim = gameObject.GetComponent<Animator>();
-                        //anim.Play("block");
+                        //anim.Play("enemy_done|block");
                         //if damage stays 0 revert damage back to original damage.
                         oppHealth.playerDamage = 0f;
                         //plays the block animation
