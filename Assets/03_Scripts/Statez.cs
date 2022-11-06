@@ -8,7 +8,8 @@ namespace Game
     {
         IdleState,
         BlockState,
-        AttackState
+        AttackState,
+        ParryState
     }
 
     public class Statez : MonoBehaviour
@@ -19,6 +20,7 @@ namespace Game
         public HealthScript oppHealth;
         public PlayerHealth playerHealth;
         public oppPunch attackPlayer;
+        public punchDestroy pd;
         private Animator anim;
         public BeatManager bm;
         public bool Ready = false;
@@ -85,6 +87,11 @@ namespace Game
                     {
                         attackPlayer.triggered = false;
                     }
+
+                    if ((pd.DamageBlocked == true) && (bm.InputVR == true))
+                        {
+                            states = states.ParryState;
+                        }
                     /*for (states = states.AttackState)
                     {
                         oppPunch.triggered = true;
@@ -92,6 +99,20 @@ namespace Game
                     }*/
 
                 }
+                    break;
+
+                case states.ParryState:
+                    {
+                        //anim = gameObject.GetComponent<Animator>();
+                        //anim.Play("pary");
+                        oppHealth.Damage = 10f;
+                        if (bm.Hit == true)
+                        {
+                            states = states.IdleState;
+                            bm.Hit = false;
+                        }
+
+                    }
                     break;
             }
         }
@@ -116,7 +137,7 @@ namespace Game
                 }
                 currentAmount = 0;
             }
-            //Debug.Log("Beat happened" + oppHealth.playerDamage);
+            //Debug.Log("Beat happened" + oppHealth.Damage);
         }
 
 

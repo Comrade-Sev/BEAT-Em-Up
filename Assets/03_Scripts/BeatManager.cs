@@ -28,6 +28,7 @@ namespace Game
         public HealthBar healthBar;
         public AudioSource source;
         public AudioClip hitSound;
+        public bool InputVR = false;
         
         
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
@@ -59,6 +60,11 @@ namespace Game
                         ).ClosestPointOnBounds(transform.position);
                     var hitTrue = Instantiate (hitEffect2, hit, transform.rotation);
                     Destroy(hitTrue, 1f);
+                }
+
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    InputVR = true;
                 }
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
