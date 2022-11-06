@@ -1092,6 +1092,7 @@ MonoBehaviour:
     type: 3}
   punchSpeed: 2.5
   triggered: 0
+  sz: {fileID: 1944391104}
 --- !u!1 &794285230
 GameObject:
   m_ObjectHideFlags: 0
@@ -8551,6 +8552,7 @@ MonoBehaviour:
   pd: {fileID: 1529863720}
   bm: {fileID: 1944391105}
   Ready: 0
+  DamageBlocked: 0
   StateChangeAmount: 5
   currentAmount: 0
 --- !u!114 &1944391105
@@ -9686,6 +9688,7 @@ MonoBehaviour:
   pd: {fileID: 0}
   bm: {fileID: 4274597077567516646}
   Ready: 0
+  DamageBlocked: 0
   StateChangeAmount: 5
   currentAmount: 0
 --- !u!95 &4274597077567516652

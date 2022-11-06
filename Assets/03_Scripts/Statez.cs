@@ -24,6 +24,7 @@ namespace Game
         private Animator anim;
         public BeatManager bm;
         public bool Ready = false;
+        public bool DamageBlocked = false;
 
         //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
         // Start is called before the first frame update    
@@ -88,9 +89,10 @@ namespace Game
                         attackPlayer.triggered = false;
                     }
 
-                    if ((pd.DamageBlocked == true) && (bm.InputVR == true))
+                    if ((DamageBlocked == true) && (bm.InputVR == true))
                     {
                         states = states.ParryState;
+                        DamageBlocked = false;
                     }
                     /*for (states = states.AttackState)
                     {
@@ -137,7 +139,7 @@ namespace Game
                 }
                 currentAmount = 0;
             }
-            //Debug.Log("Beat happened" + oppHealth.Damage);
+            Debug.Log("Beat happened" + oppHealth.playerDamage);
         }
 
 
