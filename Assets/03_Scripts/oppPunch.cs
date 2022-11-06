@@ -11,7 +11,6 @@ namespace Game
         public GameObject punchPrefab;
         public float punchSpeed = 7;
         public bool triggered = false;
-        public Statez sz;
  
         void Update()
         {
@@ -19,8 +18,6 @@ namespace Game
             {
                 var punch = Instantiate(punchPrefab, punchSpawnPoint.position, punchSpawnPoint.rotation);
                 punch.GetComponent<Rigidbody>().velocity = punchSpawnPoint.forward * punchSpeed;
-
-                punch.GetComponent<punchDestroy>().sz = sz;
             }
         }
     }
