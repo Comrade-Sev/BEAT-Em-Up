@@ -45,7 +45,7 @@ namespace Game
 
         void OnTriggerEnter(Collider collision)
         {
-            if (_timer > 0.8 * beat || _timer < 0.2f)
+            if (_timer > 0.8 * beat || _timer < 0.15f)
             {
                 hit = true;
                 source.PlayOneShot(hitSound);
@@ -57,6 +57,7 @@ namespace Game
                 {
                     var hit = collision.gameObject.GetComponent<Collider>(
                         ).ClosestPointOnBounds(transform.position);
+                    
                     var hitTrue = Instantiate (hitEffect, hit, transform.rotation);
                     Destroy(hitTrue, 0.5f);
                 }

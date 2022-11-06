@@ -16,8 +16,8 @@ namespace Game
             {
                 // if the punch hits anything with the tag "Player" it will take away health from the PlayerHealth.cs script
                 //given that the script is embedded in correctly ofcourse
-                
                 playerHealth.GetHit();
+                Debug.Log(playerHealth._CurrentHealth);
                 Destroy(gameObject, 1.0f);
                 
                 //this for loop clearly wasn't needed

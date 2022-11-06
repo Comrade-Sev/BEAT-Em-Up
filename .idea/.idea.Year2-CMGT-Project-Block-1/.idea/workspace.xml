@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/Colours.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/Colours.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/uph_ho_leftboxingglove.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/punchDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/punchDestroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Boxxer_Controller.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Boxxer_Controller.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +102,7 @@
       <workItem from="1667510278212" duration="963000" />
       <workItem from="1667659236753" duration="12098000" />
       <workItem from="1667694535323" duration="3816000" />
-      <workItem from="1667734920826" duration="6149000" />
+      <workItem from="1667734920826" duration="8614000" />
     </task>
     <servers />
   </component>
