@@ -66,7 +66,8 @@ namespace Game
                     {
                         //anim.SetBool("isHit", false);
                         //Debug.Log("blocked");
-                        //anim.Play("enemy_done|block");
+                        anim = gameObject.GetComponent<Animator>();
+                        anim.Play("enemy_done|block");
                         //if damage stays 0 revert damage back to original damage.
                         oppHealth.playerDamage = 0f;
                         //plays the block animation
