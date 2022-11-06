@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 namespace Game
 {
@@ -100,10 +102,10 @@ namespace Game
                     //_beatCount = _beatCount + 1;
                     
                 }
-                if (Input.GetKeyDown(KeyCode.Q))
+                /*if (Input.GetKeyDown((CommonUsages.triggerButton))
                 {
                     InputVR = true;
-                }
+                }*/
 
                 _timer += Time.deltaTime;
                 //Debug.Log(InputVR);
