@@ -14,7 +14,7 @@ namespace Game
         // Start is called before the first frame update
         public void Start()
         {
-            FindObjectOfType<BeatManager>().BeatHappened.AddListener(OnBeat);
+            FindObjectOfType<BeatManager>().beatHappened.AddListener(OnBeat);
             //light1 = GetComponent<Light>();
            // light2 = GetComponent<Light>();
            // light3 = GetComponent<Light>();

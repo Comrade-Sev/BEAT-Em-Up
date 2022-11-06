@@ -12,54 +12,54 @@ namespace Game
 
         public float Damage = 10f;
         public GameObject toBeAttacked;
-        public GameObject hitEffect;
-        public ParticleSystem hitEffect2;
-        public Material colour;
+        public ParticleSystem hitEffect;
         private float _timer;
         public float beat = (60 / 90);
         
-        Renderer rend;
-        Color currentColor;
-        Color _originalColor;
+        //Renderer rend;
+        //Color currentColor;
+        //Color _originalColor;
+        //public Material colour;
         
-        public float _beatCount;
-        public bool Hit;
-        public UnityEvent BeatHappened;
+        public float beatCount;
+        public bool hit;
+        public UnityEvent beatHappened;
         public HealthBar healthBar;
         public AudioSource source;
         public AudioClip hitSound;
         public bool InputVR = false;
         
         
-        //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
+        //An Event is just something that happened. You can link an action to an event which is what
+        //I did for when a beat happened
 
-        //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
+        //Opponent Object begins looking for and only respond to the glove prefabs which are tagged
+        //"HostileObject"
         void Awake()
         {
             toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
-            rend = gameObject.GetComponent<Renderer>();
-            _originalColor = rend.material.color;
-            BeatHappened = new UnityEvent();
+            beatHappened = new UnityEvent();
+            
+            //_originalColor = rend.material.color;
+            //rend = gameObject.GetComponent<Renderer>();
         }
 
         void OnTriggerEnter(Collider collision)
         {
             if (_timer > 0.8 * beat || _timer < 0.2f)
             {
-                Hit = true;
+                hit = true;
                 source.PlayOneShot(hitSound);
-                Debug.Log(OppHealth._CurrentHealth);
-                rend.material.color = Color.green;
+                Debug.Log(OppHealth.currentHealth);
                 OppHealth.GetHit();
-                healthBar.SetHealth(OppHealth._CurrentHealth);
+                healthBar.SetHealth(OppHealth.currentHealth);
 
                 if (collision.gameObject.CompareTag("DamageBlock"))
                 {
-                    Debug.Log("YO MAMAMMAMAMMAMAMMAMAMMAM");
                     var hit = collision.gameObject.GetComponent<Collider>(
                         ).ClosestPointOnBounds(transform.position);
-                    var hitTrue = Instantiate (hitEffect2, hit, transform.rotation);
-                    Destroy(hitTrue, 1f);
+                    var hitTrue = Instantiate (hitEffect, hit, transform.rotation);
+                    Destroy(hitTrue, 0.5f);
                 }
 
                 if (Input.GetKeyDown(KeyCode.Q))
@@ -67,36 +67,38 @@ namespace Game
                     InputVR = true;
                 }
             }
+            //rend.material.color = Color.green;
             //gameObject.GetComponent<MeshRenderer>().material = colour;
-            //Debug.Log(OppHealth._CurrentHealth);
         }
         
         private void FixedUpdate()
         {
 
             {
-                healthBar.SetHealth(OppHealth._CurrentHealth);
+                healthBar.SetHealth(OppHealth.currentHealth);
                 //Debug.Log(OppHealth.playerDamage);
                 if (_timer > beat)
-                    {
-                        //if (rend.material.color == _originalColor)
+                {
+                    //If a beat happened then BeatHappened logs it and sends that into the Statez
+                    //script so we know when a beat happened
+                    
+                    _timer -= beat;
+                    beatHappened.Invoke();
+
+                    /*if (rend.material.color == _originalColor)
                         {
                             //rend.material.color = Color.red;
                             //currentColor = rend.material.color;
                         }
-                        //else
+                        else
                         {
                             //rend.material.color = Color.blue;
                             //_originalColor = rend.material.color;
-                        }
+                        }*/
+                    //_beatCount = _beatCount + 1;
+                }
 
-                        _timer -= beat;
-                        BeatHappened.Invoke();
-                        //If a beat happened then BeatHappened logs it and sends that into the Statez script so we know when a beat happened
-                        //_beatCount = _beatCount + 1;
-                    }
-
-                    _timer += Time.deltaTime;
+                _timer += Time.deltaTime;
             }
         }
     }
