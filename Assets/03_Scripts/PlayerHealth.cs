@@ -9,9 +9,9 @@ namespace Game
 
         public BeatManager damageSource;
         
-        public float StartingHealth = 100f;
+        public float StartingHealth = 30f;
 
-        public float _CurrentHealth = 100f;
+        public float _CurrentHealth = 30f;
 
         public float playerDamage = 10f;
         public float CurrentHealth
@@ -19,7 +19,7 @@ namespace Game
             get { return _CurrentHealth; }
             set
             {
-                _CurrentHealth = Mathf.Clamp(value,0f,100f);
+                _CurrentHealth = Mathf.Clamp(value,0f,30f);
 
                 if(_CurrentHealth <= 0f)
                 {
