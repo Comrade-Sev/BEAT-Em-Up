@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Game
         public float Damage = 10f;
         public GameObject toBeAttacked;
         public GameObject hitEffect;
+        public ParticleSystem hitEffect2;
         public Material colour;
         private float _timer;
         public float beat = (60 / 90);
@@ -27,6 +29,7 @@ namespace Game
         public AudioSource source;
         public AudioClip hitSound;
         
+        
         //An Event is just something that happened. You can link an action to an event which is what I did for when a beat happened
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged "HostileObject"
@@ -40,23 +43,28 @@ namespace Game
 
         void OnTriggerEnter(Collider collision)
         {
-            Debug.Log(rend.material.color);
-            
             if (_timer > 0.8 * beat || _timer < 0.2f)
             {
                 Hit = true;
                 source.PlayOneShot(hitSound);
                 Debug.Log(OppHealth._CurrentHealth);
-                Debug.Log(Hit);
                 rend.material.color = Color.green;
                 OppHealth.GetHit();
                 healthBar.SetHealth(OppHealth._CurrentHealth);
-                Instantiate(hitEffect);
+
+                if (collision.gameObject.CompareTag("DamageBlock"))
+                {
+                    Debug.Log("YO MAMAMMAMAMMAMAMMAMAMMAM");
+                    var hit = collision.gameObject.GetComponent<Collider>(
+                        ).ClosestPointOnBounds(transform.position);
+                    var hitTrue = Instantiate (hitEffect2, hit, transform.rotation);
+                    Destroy(hitTrue, 1f);
+                }
             }
             //gameObject.GetComponent<MeshRenderer>().material = colour;
             //Debug.Log(OppHealth._CurrentHealth);
         }
-
+        
         private void FixedUpdate()
         {
 
