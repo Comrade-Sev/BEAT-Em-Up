@@ -3166,6 +3166,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1518989341}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1556118503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4753261480955791255, guid: b9e974d4e1b180743968502a69bc88b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1518989341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c057c8041d3b24c8f150ef69d22ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1851633244
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,7 +3611,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 810cc393549679048a0ee69a8d2356f0,
         type: 3}
       propertyPath: m_Name
-      value: Colours
+      value: Final Opponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 810cc393549679048a0ee69a8d2356f0,
+        type: 3}
+      propertyPath: m_TagString
+      value: ToBeDestroyed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810cc393549679048a0ee69a8d2356f0, type: 3}
@@ -3624,6 +3641,7 @@ MonoBehaviour:
   oppHealth: {fileID: 4274597077567516645}
   playerHealth: {fileID: 1314372543}
   attackPlayer: {fileID: 768356529}
+  pd: {fileID: 1556118503}
   bm: {fileID: 4274597077567516646}
   Ready: 0
   StateChangeAmount: 5
@@ -3642,7 +3660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OppHealth: {fileID: 4274597077567516645}
   Damage: 10
-  toBeAttacked: {fileID: 3466007857867388254}
+  toBeAttacked: {fileID: 1944391103}
   hitEffect: {fileID: 952929877259166609, guid: 3a4d141afeffd274bb113b35469d5057,
     type: 3}
   beat: 0.54545456
@@ -3652,8 +3670,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   healthBar: {fileID: 341295483}
-  source: {fileID: 4274597077567516647}
+  source: {fileID: 1944391108}
   hitSound: {fileID: 8300000, guid: 9d87a06cb96224e469f246ddb8f30933, type: 3}
+  InputVR: 0
 --- !u!114 &1944391106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3999,6 +4018,7 @@ MonoBehaviour:
   healthBar: {fileID: 341295483}
   source: {fileID: 0}
   hitSound: {fileID: 0}
+  InputVR: 0
 --- !u!114 &1992271261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4552,6 +4572,7 @@ MonoBehaviour:
   healthBar: {fileID: 341295483}
   source: {fileID: 4274597077567516647}
   hitSound: {fileID: 8300000, guid: 9d87a06cb96224e469f246ddb8f30933, type: 3}
+  InputVR: 0
 --- !u!82 &4274597077567516647
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4734,6 +4755,7 @@ MonoBehaviour:
   oppHealth: {fileID: 4274597077567516645}
   playerHealth: {fileID: 1314372543}
   attackPlayer: {fileID: 768356529}
+  pd: {fileID: 0}
   bm: {fileID: 4274597077567516646}
   Ready: 0
   StateChangeAmount: 5

@@ -89,9 +89,9 @@ namespace Game
                     }
 
                     if ((pd.DamageBlocked == true) && (bm.InputVR == true))
-                        {
-                            states = states.ParryState;
-                        }
+                    {
+                        states = states.ParryState;
+                    }
                     /*for (states = states.AttackState)
                     {
                         oppPunch.triggered = true;
