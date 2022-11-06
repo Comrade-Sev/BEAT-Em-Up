@@ -7,6 +7,7 @@ namespace Game
     public class punchDestroy : MonoBehaviour
     {
         public PlayerHealth playerHealth;
+        public Statez sz;
         public bool DamageBlocked = false;
 
         void OnTriggerEnter(Collider collision)
@@ -34,8 +35,8 @@ namespace Game
 
             if (collision.CompareTag("DamageBlock"))
             {
+                sz.DamageBlocked = true;
                 Destroy(gameObject);
-                DamageBlocked = true;
             }
                 
             
