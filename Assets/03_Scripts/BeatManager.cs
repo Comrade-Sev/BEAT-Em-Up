@@ -106,7 +106,10 @@ namespace Game
                 {
                     InputVR = true;
                 }*/
-
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    InputVR = true;
+                }
                 _timer += Time.deltaTime;
                 //Debug.Log(InputVR);
             }
