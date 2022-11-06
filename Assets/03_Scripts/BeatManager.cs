@@ -15,18 +15,17 @@ namespace Game
         public ParticleSystem hitEffect;
         private float _timer;
         public float beat = (60 / 90);
-        
-        //Renderer rend;
-        //Color currentColor;
-        //Color _originalColor;
-        //public Material colour;
-        
         public float beatCount;
         public bool hit;
         public UnityEvent beatHappened;
         public HealthBar healthBar;
         public AudioSource source;
         public AudioClip hitSound;
+        
+        //Renderer rend;
+        //Color currentColor;
+        //Color _originalColor;
+        //public Material colour;
         
         
         //An Event is just something that happened. You can link an action to an event which is what
@@ -69,10 +68,12 @@ namespace Game
         {
 
             {
+                
                 healthBar.SetHealth(OppHealth.currentHealth);
-                //Debug.Log(OppHealth.playerDamage);
+                
                 if (_timer > beat)
                 {
+                    
                     //If a beat happened then BeatHappened logs it and sends that into the Statez
                     //script so we know when a beat happened
                     
@@ -90,6 +91,7 @@ namespace Game
                             //_originalColor = rend.material.color;
                         }*/
                     //_beatCount = _beatCount + 1;
+                    
                 }
 
                 _timer += Time.deltaTime;
