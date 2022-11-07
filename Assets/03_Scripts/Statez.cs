@@ -145,9 +145,6 @@ namespace Game
                         oppStates = states.AttackState;
                         break;
                     case states.AttackState:
-                        oppStates = states.ParryState;
-                        break;
-                    case states.ParryState:
                         oppStates = states.IdleState;
                         break;
                 }
