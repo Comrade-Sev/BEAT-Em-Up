@@ -8,6 +8,9 @@ namespace Game
     {
         public PlayerHealth playerHealth;
         public Statez sz;
+        public AudioSource oppSource;
+        public AudioClip hitSound;
+        public AudioClip blockSound;
         public bool DamageBlocked = false;
 
         void OnTriggerEnter(Collider collision)
@@ -17,9 +20,10 @@ namespace Game
             {
                 // if the punch hits anything with the tag "Player" it will take away health from the PlayerHealth.cs script
                 //given that the script is embedded in correctly ofcourse
+                oppSource.PlayOneShot(hitSound);
                 playerHealth.GetHit();
                 Debug.Log(playerHealth._CurrentHealth);
-                Destroy(gameObject, 1.0f);
+                Destroy(gameObject);
                 
                 //this for loop clearly wasn't needed
                 /*for (int i = 0; i < 2; i++) 
@@ -35,6 +39,7 @@ namespace Game
 
             if (collision.CompareTag("DamageBlock"))
             {
+                oppSource.PlayOneShot(blockSound);
                 sz.DamageBlocked = true;
                 Destroy(gameObject);
             }

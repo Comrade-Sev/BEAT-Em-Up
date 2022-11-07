@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Common-Games
-  productName: Rocky Beats
+  productName: BEAT Em' Up
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -245,6 +245,13 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 7117e2bb1ce6a3d4f915519a1585e65b, type: 2}
+  - {fileID: 4092247009410177398, guid: cf4270ffa8da8244db9e55c0286d1664, type: 2}
+  - {fileID: 6792267994561790333, guid: 5b463ab3e273ef84883aeb85c22a79f4, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -264,8 +271,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.CommonGames.RockyBeats
-    Standalone: com.Common-Games.Rocky-Beats
+    Android: com.CommonGames.BEATEmUp
+    Standalone: com.Common-Games.BEAT-Em--Up
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -626,7 +633,9 @@ PlayerSettings:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality: []
+  m_BuildTargetGroupLightmapEncodingQuality:
+  - m_BuildTarget: Android
+    m_EncodingQuality: 1
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetNormalMapEncoding: []
   m_BuildTargetDefaultTextureCompressionFormat: []

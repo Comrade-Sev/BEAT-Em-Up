@@ -14,9 +14,7 @@ namespace Game
 
     public class Statez : MonoBehaviour
     {
-
-
-        states states = states.IdleState;
+        public states oppStates = states.IdleState;
         public HealthScript oppHealth;
         public PlayerHealth playerHealth;
         public oppPunch attackPlayer;
@@ -35,13 +33,13 @@ namespace Game
         {
             FindObjectOfType<BeatManager>().beatHappened.AddListener(OnBeat);
             anim = gameObject.GetComponent<Animator>();
-            //This makes it so that the void OnBeat can notice when it needs to switch states
+            //This makes it so that the void OnBeat can notice when it needs to switch oppStates
         }
 
         // Update is called once per frame
         void Update()
         {
-            switch (states)
+            switch (oppStates)
             {
                 case states.IdleState:
                     Ready = true;
@@ -103,10 +101,10 @@ namespace Game
 
                     if ((DamageBlocked == true) && (bm.InputVR == true))
                     {
-                        states = states.ParryState;
+                        oppStates = states.ParryState;
                         DamageBlocked = false;
                     }
-                    /*for (states = states.AttackState)
+                    /*for (oppStates = oppStates.AttackState)
                     {
                         oppPunch.triggered = true;
                         
@@ -123,7 +121,7 @@ namespace Game
                         oppHealth.playerDamage = 10f;
                         if (bm.hit == true)
                         {
-                            states = states.IdleState;
+                            oppStates = states.IdleState;
                             bm.hit = false;
                         }
 
@@ -138,16 +136,16 @@ namespace Game
             if(currentAmount > StateChangeAmount)
             //If current amount reaches the beat amount of StateChangeAmount it tells it to change state and reset the value of currentAmount
             {
-                switch (states)
+                switch (oppStates)
                 {
                     case states.IdleState:
-                        states = states.BlockState;
+                        oppStates = states.BlockState;
                         break;
                     case states.BlockState:
-                        states = states.AttackState;
+                        oppStates = states.AttackState;
                         break;
                     case states.AttackState:
-                        states = states.IdleState;
+                        oppStates = states.IdleState;
                         break;
                 }
 

@@ -5,16 +5,22 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using CommonUsages = UnityEngine.XR.CommonUsages;
 
 namespace Game
 {
     public class BeatManager : MonoBehaviour
     {
         public HealthScript OppHealth;
+        public Statez sz;
+        
+        //public ActionBasedController actionBasedController;
+        //public GameObject toBeAttacked;
 
         public float Damage = 10f;
-        public GameObject toBeAttacked;
         public ParticleSystem hitEffect;
+        public ParticleSystem blockEffect;
         private float _timer;
         public float beat = (60 / 90);
         public float beatCount;
@@ -23,7 +29,10 @@ namespace Game
         public HealthBar healthBar;
         public AudioSource source;
         public AudioClip hitSound;
+        public AudioClip blockSound;
         public bool InputVR = false;
+        public bool stillHolding;
+        private UnityEngine.XR.InputDevice Device;
         
         //Renderer rend;
         //Color currentColor;
@@ -36,9 +45,34 @@ namespace Game
 
         //Opponent Object begins looking for and only respond to the glove prefabs which are tagged
         //"HostileObject"
+        
+                
+        private void GetInputs()
+        {
+            bool triggerValue;
+            if (Device.TryGetFeatureValue(CommonUsages.triggerButton, out triggerValue) && triggerValue)
+            {
+                Debug.Log("Trigger button is pressed.");
+            }
+            
+            /*var thisController = this.gameObject.GetComponentInParent<ActionBasedController>(
+            ).selectAction.action.ReadValue<float>();
+            
+            if (thisController > 0.5f && !stillHolding)
+            {
+                stillHolding = true;
+
+                Debug.Log("grab trigger pressed");
+            }
+            else if(thisController < 0.5f && stillHolding)
+            {
+                stillHolding = false;
+                Debug.Log("grab trigger let go");
+            }*/
+        }
         void Awake()
         {
-            toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
+            //toBeAttacked = GameObject.FindGameObjectWithTag("HostileObject");
             beatHappened = new UnityEvent();
             
             //_originalColor = rend.material.color;
@@ -50,7 +84,6 @@ namespace Game
             if (_timer > 0.8 * beat || _timer < 0.15f)
             {
                 hit = true;
-                source.PlayOneShot(hitSound);
                 Debug.Log(OppHealth.currentHealth);
                 OppHealth.GetHit();
                 healthBar.SetHealth(OppHealth.currentHealth);
@@ -59,9 +92,28 @@ namespace Game
                 {
                     var hit = collision.gameObject.GetComponent<Collider>(
                         ).ClosestPointOnBounds(transform.position);
+                    var rot = transform.rotation;
+                    var currentState = sz.oppStates;
                     
-                    var hitTrue = Instantiate (hitEffect, hit, transform.rotation);
-                    Destroy(hitTrue, 0.5f);
+                    /*if (currentState == states.AttackState)
+                    {
+                        source.PlayOneShot(hitSound);
+                        var hitTrue = Instantiate (hitEffect, hit, rot);
+                        Destroy(hitTrue, 0.5f);
+                    }*/
+                    
+                    if (currentState == states.BlockState)
+                    {
+                        source.PlayOneShot(blockSound);
+                        var blockTrue = (Instantiate(blockEffect, hit, rot));
+                        Destroy(blockTrue, 0.5f);
+                    }
+                    else
+                    {
+                        source.PlayOneShot(hitSound);
+                        var hitTrue = Instantiate (hitEffect, hit, rot);
+                        Destroy(hitTrue, 0.5f);
+                    }
                 }
 
                 /*if (Input.GetKeyDown(KeyCode.Q))
@@ -102,10 +154,12 @@ namespace Game
                     //_beatCount = _beatCount + 1;
                     
                 }
-                /*if (Input.GetKeyDown((CommonUsages.triggerButton))
+
+                if (Device.TryGetFeatureValue(CommonUsages.triggerButton, out var triggerValue) && triggerValue)
                 {
                     InputVR = true;
-                }*/
+                }
+
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
                     InputVR = true;
@@ -113,6 +167,10 @@ namespace Game
                 _timer += Time.deltaTime;
                 //Debug.Log(InputVR);
             }
+        }
+        void Update()
+        {
+            GetInputs();
         }
     }
 }

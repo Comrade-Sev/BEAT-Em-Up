@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -23,7 +24,9 @@ namespace Game
 
                 if(_CurrentHealth <= 0f)
                 {
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
+                    //Application.Quit();
+                    SceneManager.LoadScene("scene_demo");
                 }
             }
         }
