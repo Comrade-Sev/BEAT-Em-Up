@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -23,6 +24,7 @@ namespace Game
         public BeatManager bm;
         public bool Ready = false;
         public bool DamageBlocked = false;
+        private float number = 0;
 
         //currentAmount keeps track of the amount of beats that have happened and StateChangeAmount is a set value that gets used later to indicate when the state should change
         // Start is called before the first frame update    
@@ -39,6 +41,13 @@ namespace Game
         // Update is called once per frame
         void Update()
         {
+            if(number == 3)
+            {
+                SceneManager.LoadScene("scene_demo");
+            }
+            {
+
+            }
             switch (oppStates)
             {
                 case states.IdleState:
@@ -87,12 +96,14 @@ namespace Game
                         anim.SetBool("isBlock", false);
                         //anim.SetBool("isBlockHit", false);
                         oppHealth.playerDamage = 5f;
+
                     if (Ready == true)
                     {
                         Ready = false;
                         attackPlayer.triggered = true;
                         anim = gameObject.GetComponent<Animator>();
                         anim.Play("enemy_done|punch_right");
+                        number++;
                         }
                     else
                     {
