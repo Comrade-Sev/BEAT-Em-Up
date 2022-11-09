@@ -140,19 +140,12 @@ namespace Game
                     
                     _timer -= beat;
                     beatHappened.Invoke();
-
-                    /*if (rend.material.color == _originalColor)
-                        {
-                            //rend.material.color = Color.red;
-                            //currentColor = rend.material.color;
-                        }
-                        else
-                        {
-                            //rend.material.color = Color.blue;
-                            //_originalColor = rend.material.color;
-                        }*/
-                    //_beatCount = _beatCount + 1;
                     
+                    beatCount++;
+                    if (beatCount == 13)
+                    {
+                        beatCount = 1;
+                    }
                 }
 
                 if (Device.TryGetFeatureValue(CommonUsages.triggerButton, out var triggerValue) && triggerValue)

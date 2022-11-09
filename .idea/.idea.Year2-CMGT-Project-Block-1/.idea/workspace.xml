@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2c3abdc-0e30-4d4f-85f5-10f5f3d2dbaf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/final_boxxing_glove_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/final_boxxing_glove_left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01_Prefabs/final_boxxing_glove_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01_Prefabs/final_boxxing_glove_right.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Year2-CMGT-Project-Block-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Scenes/Demos/scene_demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/BeatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Statez.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Statez.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/CubeSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/DebugLog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/enemyTeleport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/punchDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/urpBugWorkaround.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,6 +101,8 @@
       <workItem from="1667659236753" duration="12098000" />
       <workItem from="1667694535323" duration="3816000" />
       <workItem from="1667734920826" duration="8614000" />
+      <workItem from="1667961439746" duration="714000" />
+      <workItem from="1667996232498" duration="11103000" />
     </task>
     <servers />
   </component>

@@ -151,7 +151,7 @@ namespace Game
 
                 currentAmount = 0;
             }
-            Debug.Log("Beat happened" + oppHealth.playerDamage);
+            //Debug.Log("Beat happened" + oppHealth.playerDamage);
         }
 
 
