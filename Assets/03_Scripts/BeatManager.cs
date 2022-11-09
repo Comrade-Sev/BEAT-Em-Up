@@ -23,7 +23,7 @@ namespace Game
         public ParticleSystem blockEffect;
         private float _timer;
         public float beat = (60 / 90);
-        public float beatCount;
+        public float beatCount = 1;
         public bool hit;
         public UnityEvent beatHappened;
         public HealthBar healthBar;
@@ -142,7 +142,7 @@ namespace Game
                     beatHappened.Invoke();
                     
                     beatCount++;
-                    if (beatCount == 13)
+                    if (beatCount == 9)
                     {
                         beatCount = 1;
                     }

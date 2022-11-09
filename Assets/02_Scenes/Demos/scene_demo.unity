@@ -7930,6 +7930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b976c8a503b2cd64eabfd59b122e185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 1944391108}
+  moveSound: {fileID: 8300000, guid: 5da4f154b9bd95c43bb659efb7e7f22c, type: 3}
   position1: {fileID: 1869016150}
   position2: {fileID: 1186681584}
   position3: {fileID: 1496749777}
