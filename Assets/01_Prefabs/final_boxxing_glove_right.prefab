@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 68490219913641329}
   - component: {fileID: 2816900635568015803}
   - component: {fileID: 3519054678148519225}
+  - component: {fileID: 3519054678148519226}
   - component: {fileID: -7281650361697322186}
   m_Layer: 0
   m_Name: final_boxxing_glove_right
-  m_TagString: DamageBlock
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +102,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &3519054678148519226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4330026616361396334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017200228, y: 0.015021892, z: 0.029056981}
+  m_Center: {x: 0.0043980354, y: -0.0016149324, z: 0.0104284985}
 --- !u!65 &-7281650361697322186
 BoxCollider:
   m_ObjectHideFlags: 0
